@@ -1,0 +1,55 @@
+# Datatypes (KEYWORD1)
+LDC161X	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+LDC_setRecommendedSettings KEYWORD2
+LDC_readRegister KEYWORD2
+LDC_setRegister KEYWORD2
+LDC_readManufacturerID KEYWORD2
+LDC_readDeviceID KEYWORD2
+LDC_readData KEYWORD2
+LDC_readStatus KEYWORD2
+LDC_hasNewData KEYWORD2
+LDC_hasConversionErrors KEYWORD2
+LDC_getChannelWithErrors KEYWORD2
+LDC_resetLDC KEYWORD2
+LDC_readResetDev KEYWORD2
+LDC_setResetDev KEYWORD2
+LDC_setOffset KEYWORD2
+LDC_readOffset KEYWORD2
+LDC_setConversionTime KEYWORD2
+LDC_readConversionTime KEYWORD2
+LDC_setRCount KEYWORD2
+LDC_readRCount KEYWORD2
+LDC_setSettleTime KEYWORD2
+LDC_readSettleTime KEYWORD2
+LDC_setClockDividers KEYWORD2
+LDC_setClockDividers KEYWORD2
+LDC_readClockDividers KEYWORD2
+LDC_getInputDivider KEYWORD2
+LDC_getReferenceDivider KEYWORD2
+LDC_setConfig KEYWORD2
+LDC_readConfig KEYWORD2
+LDC_getActiveChannel KEYWORD2
+LDC_isSleeping KEYWORD2
+LDC_isCurrentOverrideEnabled KEYWORD2
+LDC_isLowPowerModeEnabled KEYWORD2
+LDC_isAutoAmplitudeDisabled KEYWORD2
+LDC_hasExternalOscillator KEYWORD2
+LDC_isInterruptDisabled KEYWORD2
+LDC_isHighCurrentDriveEnabled KEYWORD2
+LDC_setDriveCurrent KEYWORD2
+LDC_setErrorConfig KEYWORD2
+LDC_readErrorConfig KEYWORD2
+LDC_setMUXConfig KEYWORD2
+LDC_readMUXConfig KEYWORD2
+LDC_isAutoscanEnabled KEYWORD2
+LDC_getAutoscanSequence KEYWORD2
+LDC_getDeglitchBandwidth KEYWORD2
+LDC_readDriveCurrent KEYWORD2
+LDC_getDriveCurrent KEYWORD2
+LDC_getInitialDriveCurrent KEYWORD2
+
+# Instances (KEYWORD2)
+
+# Constants (LITERAL1)
