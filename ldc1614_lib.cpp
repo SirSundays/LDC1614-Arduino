@@ -122,7 +122,7 @@ void LDC161X::LDC_setRegister(uint8_t register_address, uint16_t contents)
     Wire.endTransmission();
 }
 
-uint16_t LDC161X::LDC_readData(int channel)
+uint32_t LDC161X::LDC_readData(int channel)
 {
     uint8_t register_address = 0;
     
@@ -144,16 +144,29 @@ uint16_t LDC161X::LDC_readData(int channel)
             register_address = LDC_DATA0; //defaults to DATA0 on invalid argument
     };
 
-    uint16_t data = 0;
+    uint16_t data1 = 0;
+    uint16_t data2 = 0;
 
     Wire.beginTransmission(_address); //I2C request code by Matthew Post
-    Wire.write(register_address); //Data register for specified channel
+    Wire.write(register_address); //Data register MSB for specified channel
     Wire.endTransmission();
     Wire.requestFrom(_address, 2); //request 2 bytes
     while(Wire.available()) {     //read bytes
-      data = data << 8;             //shift MSB to left 8 bits
-      data = data | Wire.read();    //stop at LSB
+      data1 = data1 << 8;             //shift MSB to left 8 bits
+      data1 = data1 | Wire.read();    //stop at LSB
     }
+
+    Wire.beginTransmission(_address); 
+    Wire.write(register_address + 1); //Data register LSB for specified channel
+    Wire.endTransmission();
+    Wire.requestFrom(_address, 2); //request 2 bytes
+    while (Wire.available()) {     //read bytes
+        data2 = data2 << 8;             //shift MSB to left 8 bits
+        data2 = data2 | Wire.read();    //stop at LSB
+    }
+
+    uint32_t data = ((uint32_t)data1 << 16) + data2;
+
 
     return data;
 }

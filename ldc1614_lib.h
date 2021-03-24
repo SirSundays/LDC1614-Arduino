@@ -60,7 +60,7 @@ public:
 	// Reads and returns the raw sensor output for channel x via I2C. Doesn't remove error bits.
 	// Output bits: ERR_URx | ERR_ORx | ERR_WDx | ERR_AEx | DATAx[11:0]
 	//------------------------------------------------------------------------------------------
-	uint16_t LDC_readData(int channel);
+	uint32_t LDC_readData(int channel);
 
 	//------------------------------------------------------------------------------------------
 	// Reads and returns the status bytes for the sensor via I2C.
